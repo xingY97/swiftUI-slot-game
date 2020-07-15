@@ -10,6 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    private var symbols = ["apple", "cherry", "star"]
+    
+    @State private var number = [0,0,0]
     @State private var credits = 1000
     
     var body: some View {
@@ -61,26 +64,28 @@ struct ContentView: View {
                 HStack {
                     
                     
-                    Image("apple").resizable()
+                    Image(symbols[number[0]])
+                        .resizable()
                         .aspectRatio(1, contentMode:.fit)
                         .background(Color.white.opacity(0.5))
                         .cornerRadius(20)
                     
-                    Image("apple").resizable()
+                    Image(symbols[number[1]])
+                        .resizable()
                         .aspectRatio(1, contentMode:.fit)
                         .background(Color.white.opacity(0.5))
                         .cornerRadius(20)
 
-                    Image("apple").resizable()
+                    Image(symbols[number[2]])
+                        .resizable()
                         .aspectRatio(1, contentMode:.fit)
                         .background(Color.white.opacity(0.5))
                         .cornerRadius(20)
-                    Spacer()
-
+                        
+                
                 }
                 
                 Spacer()
-                
                 //Button
                 Button(action: {
                     
