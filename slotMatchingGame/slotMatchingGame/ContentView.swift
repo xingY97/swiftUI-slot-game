@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var credits = 1000
+    
     var body: some View {
         
         
@@ -25,6 +28,8 @@ struct ContentView: View {
             
             VStack {
                 
+                Spacer()
+                
                 //title
                 HStack{
                     Image(systemName: "star.fill")
@@ -38,17 +43,23 @@ struct ContentView: View {
                         .foregroundColor(.green)
                 }.scaleEffect(2)
                 
+                
+                Spacer()
+                
                 //credites counter
-                Text("Credits: 1000")
+                Text("Credits: " + String(credits))
                     .foregroundColor(.black)
                     .background(Color.white.opacity(0.5))
                     .padding(.all,10)
                     .background(Color.white.opacity(0.5))
                     .cornerRadius(20)
                 
+                
+                Spacer()
+                
                 //Cards
                 HStack {
-                    Spacer()
+                    
                     
                     Image("apple").resizable()
                         .aspectRatio(1, contentMode:.fit)
@@ -67,16 +78,22 @@ struct ContentView: View {
                     Spacer()
 
                 }
+                
+                Spacer()
+                
                 //Button
                 Button(action: {
-                    //Todo
+                    
+                    self.credits += 1
+                    
                 }) {
                     Text("Spin")
                     .bold()
                         .foregroundColor(.white)
                         .padding(.all, 10)
+                        .padding([.leading, .trailing], 30)
                         .background(Color.pink)
-                        
+                    
                 }
             }
             
