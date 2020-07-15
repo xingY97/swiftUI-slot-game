@@ -14,6 +14,7 @@ struct ContentView: View {
     
     @State private var number = [0,0,0]
     @State private var credits = 1000
+    private var betAmount = 5
     
     var body: some View {
         
@@ -86,10 +87,29 @@ struct ContentView: View {
                 }
                 
                 Spacer()
+                
                 //Button
                 Button(action: {
                     
-                    self.credits += 1
+                    //change the images
+                    self.number[0] = Int.random(in: 0...self.symbols.count - 1)
+                    
+                    self.number[1] = Int.random(in: 0...self.symbols.count - 1)
+                    
+                    self.number[2] = Int.random(in: 0...self.symbols.count - 1)
+                    
+                    //Check winnings
+                    if self.number[0] == self.number[1] && self.number[1] == self.number[2] {
+                        
+                        //won
+                        self.credits += self.betAmount * 10
+                    }
+                    else {
+                        self.credits -= self.betAmount
+                    }
+                    
+                    
+                    
                     
                 }) {
                     Text("Spin")
