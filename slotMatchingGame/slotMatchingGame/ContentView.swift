@@ -39,7 +39,7 @@ struct ContentView: View {
                     Image(systemName: "star.fill")
                         .foregroundColor(.green)
                     
-                    Text("SwiftUI slots")
+                    Text("Slot Matching Game")
                         .bold()
                         .foregroundColor(.white)
                     
