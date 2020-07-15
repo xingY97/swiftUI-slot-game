@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var symbols = ["apple", "cherry", "star"]
+    @State private var symbols = ["photograph", "beach", "backpack"]
     @State private var number = Array(repeating: 0, count: 9)
     @State private var backgrounds = Array(repeating: Color.white, count: 9)
     @State private var credits = 100
@@ -25,10 +25,10 @@ struct ContentView: View {
                 .foregroundColor(Color(red: 50/255, green: 80/255, blue: 70/255))
                 .edgesIgnoringSafeArea(.all)
             
-            Rectangle()
-                .foregroundColor(Color(red: 228/255, green: 195/255, blue: 76/255))
-                .rotationEffect(Angle(degrees: 75))
-                .edgesIgnoringSafeArea(.all)
+//            Rectangle()
+//                .foregroundColor(Color(red: 228/255, green: 100/255, blue: 70/255))
+//                .rotationEffect(Angle(degrees: 75))
+//                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 
