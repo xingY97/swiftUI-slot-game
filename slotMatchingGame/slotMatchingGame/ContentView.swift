@@ -25,10 +25,6 @@ struct ContentView: View {
                 .foregroundColor(Color(red: 50/255, green: 80/255, blue: 70/255))
                 .edgesIgnoringSafeArea(.all)
             
-//            Rectangle()
-//                .foregroundColor(Color(red: 228/255, green: 100/255, blue: 70/255))
-//                .rotationEffect(Angle(degrees: 75))
-//                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 
