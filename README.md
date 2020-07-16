@@ -1,4 +1,4 @@
-#SwitUI
+###### SwiftUI
 
 Apple introduced SwiftUI during WWDC 19, It is an innovative simpler way to build user interfaces for ios products. Therefore I decided to explore this fairly new technology by building a slot matching Game using SwiftUI. Before diving in, it is key to note that SwiftUI only supports ios13 or above.
 
